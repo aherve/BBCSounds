@@ -166,12 +166,12 @@ section {
 .ais-search-box--input {
   padding-left: 14px; }
 
-.genre, .year {
+.category, .year {
   margin: 12px 0; }
 
 .year {
   font-weight: bold; }
 
-.genre .badge {
+.category .badge {
   background: #BBBBBB; }
 

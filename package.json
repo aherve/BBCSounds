@@ -4,6 +4,11 @@
   "main": "index.js",
   "author": "Aurélien Hervé <mail@aurelien-herve.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack",
+    "serve": "webpack -w",
+    "watch": "webpack -w"
+  },
   "devDependencies": {
     "babel-loader": "^7.1.4",
     "css-loader": "^0.28.11",

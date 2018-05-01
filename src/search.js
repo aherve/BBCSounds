@@ -21,12 +21,11 @@ search.addWidget(
 
 var hitTemplate =
   '<div class="hit media">' +
-    '<div class="media-left">' +
-      '<div class="media-object" style="background-image: url(\'{{image}}\');"></div>' +
-    '</div>' +
+    //'<div class="media-left">' +
+      //'<div class="media-object" style="background-image: url(\'{{image}}\');"></div>' +
+    //'</div>' +
     '<div class="media-body">' +
-      '<h4 class="media-heading">{{{_highlightResult.title.value}}}</h4>' +
-      '<p class="year">{{name}}</p>' +
+      '<h4 class="media-heading">{{{_highlightResult.name.value}}}</h4>' +
       '<p class="genre">{{description}}</p>' +
       '<p><audio src="{{soundUrl}}" type="audio/wav" preload="none" controls="">Your browser does not support the audio element.</audio>' +
       '<a class="btn btn-primary" download="" href="{{soundUrl}}" aria-label="{{name}}">Download</a></p>' +
@@ -44,13 +43,15 @@ search.addWidget(
       empty: noResultsTemplate,
       item: hitTemplate
     },
-    transformData: function(hit) {
-      hit.stars = [];
-      for (var i = 1; i <= 5; ++i) {
-        hit.stars.push(i <= hit.rating);
-      }
-      return hit;
-    }
+    /*
+     *transformData: function(hit) {
+     *  hit.stars = [];
+     *  for (var i = 1; i <= 5; ++i) {
+     *    hit.stars.push(i <= hit.rating);
+     *  }
+     *  return hit;
+     *}
+     */
   })
 );
 
@@ -67,7 +68,7 @@ search.addWidget(
 search.addWidget(
   instantsearch.widgets.hierarchicalMenu({
     container: '#categories',
-    attributes: ['categories.lvl0', 'categories.lvl1', 'categories.lvl2', 'categories.lvl2'],
+    attributes: ['categories.lvl0', 'categories.lvl1', 'categories.lvl2', 'categories.lvl3'],
     templates: {
       header: 'Categories'
     },
@@ -102,19 +103,6 @@ search.addWidget(
  *      list: 'nav nav-list',
  *      count: 'badge pull-right',
  *      active: 'active'
- *    }
- *  })
- *);
- */
-
-/*
- *search.addWidget(
- *  instantsearch.widgets.starRating({
- *    container: '#ratings',
- *    attributeName: 'rating',
- *    cssClasses: {
- *      list: 'nav',
- *      count: 'badge pull-right'
  *    }
  *  })
  *);
