@@ -24,7 +24,7 @@ var hitTemplate =
   '<tbody>' +
   '{{#hits}}' +
     '<tr>' +
-      '<td>{{description}}</td>' +
+      '<td>{{{_highlightResult.description.value}}}</td>' +
       '<td><audio src="{{soundUrl}}" type="audio/wav" preload="none" controls="">Your browser does not support the audio element.</audio></td>' +
       '<td><a class="btn btn-primary" download="" href="{{soundUrl}}" aria-label="{{name}}">Download</a></td>' +
     '</tr>' +
@@ -33,7 +33,7 @@ var hitTemplate =
 '</table>'
 
 var noResultsTemplate =
-  '<div class="text-center">No results found matching <strong>{{query}}</strong>.</div>';
+  '<div class="text-center">No results found matching <strong>{{query}}</strong>. Try clearing the filters, or another query</div>';
 
 search.addWidget(
   instantsearch.widgets.hits({
