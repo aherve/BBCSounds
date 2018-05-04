@@ -131,7 +131,9 @@ section article #stats {
   font-size: .8em;
 line-height: 24px; }
 section article #hits {
-  padding: 0 15px;
+  /*
+   *padding: 0 15px;
+   */
 }
 section article #pagination .pagination a {
   background: #F8F8F8;
