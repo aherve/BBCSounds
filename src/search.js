@@ -24,9 +24,14 @@ var hitTemplate =
   '<tbody>' +
   '{{#hits}}' +
     '<tr>' +
-      '<td>{{{_highlightResult.description.value}}}</td>' +
-      '<td><audio src="{{soundUrl}}" type="audio/wav" preload="none" controls="">Your browser does not support the audio element.</audio></td>' +
-      '<td><a class="btn btn-primary" download="" href="{{soundUrl}}" aria-label="{{name}}">Download</a></td>' +
+      '<td class="row visible-xs">' +
+        '<p>{{{_highlightResult.description.value}}}</p>' +
+        '<audio src="{{soundUrl}}" type="audio/wav" preload="none" controls="">Your browser does not support the audio element.</audio>' +
+        '<a class="btn btn-primary pull-right" download="" href="{{soundUrl}}" aria-label="{{name}}">Download</a>' +
+      '</td>' +
+      '<td class="hidden-xs">{{{_highlightResult.description.value}}}</td>' +
+      '<td class="hidden-xs"><audio src="{{soundUrl}}" type="audio/wav" preload="none" controls="">Your browser does not support the audio element.</audio></td>' +
+      '<td class="hidden-xs"><a class="btn btn-primary" download="" href="{{soundUrl}}" aria-label="{{name}}">Download</a></td>' +
     '</tr>' +
   '{{/hits}}' +
   '</tbody>' +

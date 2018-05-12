@@ -3,7 +3,6 @@
     <title>BBC Sound Effects Explorer</title>
     <meta charset="utf-8"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.5/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
     <!--[if lte IE 9]>
       <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
@@ -21,30 +20,32 @@
   <body>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <div class="navbar-header col-md-4 col-sm-1">
+        <div class="navbar-header col-md-4 col-sm-6">
           <h1>BBC Sound Effects Explorer</h1>
         </div>
-        <div class="navbar-header col-md-8 col-sm-11">
+        <div class="navbar-header col-md-8 col-sm-6">
           <div class="form-group searchbox">
             <input type="text" class="form-control" id="q" placeholder="search any sounds"/>
           </div>
         </div>
       </div>
     </nav>
-    <div class="row col-md-12">
-      <p>This page provides a search engine on the <a href="http://bbcsfx.acropolis.org.uk">BBC Sound Effect database</a>. All content belong to the BBC</p>
-    </div>
-    <section>
-      <aside class="col-md-2">
-        <button class="btn btn-primary" id="clear"></button></li>
-      <div id="categories"></div>
-      </aside>
-      <article class="col-md-10 pull-right">
-        <div id="stats" class="text-right text-muted"></div>
-        <div id="hits"></div>
-        <div id="pagination" class="text-center"></div>
-      </article>
-    </section>
+    <div class="container-fluid">
+      <div class="row">
+        <p class="col-md-12">This page provides a search engine on the <a href="http://bbcsfx.acropolis.org.uk">BBC Sound Effect database</a>. All content belong to the BBC</p>
+      </div>
+      <section class="row">
+    	<aside class="col-sm-3 col-md-2">
+          <button class="btn btn-primary" id="clear"></button>
+        	<div id="categories"></div>
+        </aside>
+  	    <article class="col-sm-9 col-md-10">
+          <div id="stats" class="text-right text-muted"></div>
+          <div id="hits"></div>
+          <div id="pagination" class="text-center"></div>
+        </article>
+      </section>
+     </div>
     <script src="dist/bundle.js"> </script>
   </body>
 </html>
